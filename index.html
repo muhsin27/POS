@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS system (front page)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 8px;
+        font-size: 1rem;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .btn button {
+        width: 220px;
+        height: 200px;
+        margin: 8px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">logo</div>
+      <div class="profile">
+        <a href="#">Sign in </a>
+        <img src="" alt="profile pic" />
+      </div>
+    </header>
+    <main>
+      <div class="btn"><button>INVENTORY</button><button>CASHIER</button></div>
+      <a href="#">Sign up</a>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>

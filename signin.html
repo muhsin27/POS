@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: burlywood;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        padding: 10px 20px;
+        margin-top: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-top: 20px;
+        width: 240px;
+        display: inline-block;
+      }
+      button {
+        margin-top: 40px;
+      }
+      a {
+        position: relative;
+        bottom: -28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>P.O.S system</h2>
+      <form action="get">
+        <label for="id">Username</label>
+        <input
+          type="text"
+          name="id"
+          id="id"
+          required
+          placeholder="Enter your username"
+        />
+        <label for="pass">Password</label>
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          required
+          placeholder="Enter your password"
+        />
+        <button type="submit">Sign In</button>
+      </form>
+      <a href="#">Forgot password or username</a>
+    </div>
+  </body>
+</html>
