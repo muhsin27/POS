@@ -5,38 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        table{
-            width: 100%;
-        }
-        .inv{
-            display: flex;
-            flex-direction: column;
-        }
-        .top{
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-        }
-        td{
-            text-align: center;
-        }
+      table {
+        width: 100%;
+      }
+      .inv {
+        display: flex;
+        flex-direction: column;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      td {
+        text-align: center;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form > div {
+        display: flex;
+      }
+
+      .form label {
+        min-width: 160px;
+        margin-right: 10px;
+        text-align: right;
+      }
+      .form > button {
+        margin-left: 100px;
+        width: 240px;
+      }
     </style>
   </head>
   <body>
     <div class="inv">
       <div class="top">
-        <div class="search"><input type="text" /><button class="search">Search</div> </button>
-         <button class="add">+</button
-        ><button class="minus">-</button>
+        <div id="date">date</div>
+        <div class="search">
+          <input type="text" /><button class="search">Search</button>
+          <button class="add">+</button> <button class="minus">-</button>
+        </div>
       </div>
-      <div class="table">Inventory
+      <div class="form">
+        <div class="name">
+          <label for="name">Name :</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="quantity">
+          <label for="quantity">Quantity :</label>
+          <input type="number" name="quantity" id="quantity" />
+        </div>
+        <div class="invoicedate">
+          <label for="invoiceDate">Invoice Date :</label>
+          <input type="date" name="invoiceDate" id="invoiceDate" />
+        </div>
+        <div class="manudate">
+          <label for="manuDate">Manufactoring Date :</label>
+          <input type="date" name="manuDate" id="manuDate" />
+        </div>
+        <div class="expdate">
+          <label for="expDate">Expired Date :</label>
+          <input type="date" name="expDate" id="expDate" />
+        </div>
+        <div class="uprice">
+          <label for="uPrice">Unit Price(RM) :</label>
+          <input type="number" step="0.01" name="uPrice" id="uPrice" />
+        </div>
+        <div class="cprice">
+          <label for="cPrice">Cost Price(RM) :</label>
+          <input type="number" step="0.01" name="cPrice" id="cPrice" />
+        </div>
+        <div class="sprice">
+          <label for="sPrice">Sell Price(RM) :</label>
+          <input type="number" step="0.01" name="sPrice" id="sPrice" />
+        </div>
+        <div class="code">
+          <label for="code">Code :</label>
+          <input type="text" name="code" id="code" />
+        </div>
+        <div class="category">
+          <label for="category">Category :</label>
+          <input type="text" name="category" id="category" />
+        </div>
+        <button onclick="add()">Add</button>
+      </div>
+
+      <div class="table">
+        Inventory
         <table border="1">
           <thead>
             <tr>
               <th>No.</th>
               <th>Product name</th>
               <th>Quantity</th>
-              <th>Registration date</th>
+              <th>Invoice date</th>
               <th>Manufactoring date</th>
               <th>Expiry date</th>
               <th>Unit. price</th>
@@ -47,32 +113,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>ayam goreng</td>
-              <td>2</td>
-              <td>10/2/24</td>
-              <td>10/2/24</td>
-              <td>10/2/24</td>
-              <td>2.50</td>
-              <td>2.50</td>
-              <td>2.50</td>
-              <td>AG</td>
-              <td>Makanan</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>ayam goreng</td>
-              <td>2</td>
-              <td>10/2/24</td>
-              <td>10/2/24</td>
-              <td>10/2/24</td>
-              <td>2.50</td>
-              <td>2.50</td>
-              <td>2.50</td>
-              <td>AG</td>
-              <td>Makanan</td>
-            </tr>
             <tr>
               <td>1</td>
               <td>ayam goreng</td>
